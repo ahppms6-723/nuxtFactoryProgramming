@@ -1,0 +1,30 @@
+@charset "UTF-8"
+
+/* Theme Name: portfolio */
+
+@use "reset"
+
+@use "config"
+
+@use "variables"
+
+@use "library/functions/numbers"
+@use "library/functions/map"
+
+// mixins, components, modules以下は増やす度にここに読み込んでいく。
+// gulp-sass-globが解決すれば、全てワイルドカードで読み込ませる。
+@use "library/mixins/forms"
+@use "library/mixins/generic"
+@use "library/mixins/hacks"
+@use "library/mixins/layouts"
+@use "library/mixins/textAround"
+
+@use "library/projectMixins/mixin"
+
+@use "base"
+
+@use "components/component"
+
+@use "modules/index"
+@use "modules/language"
+@use "modules/sectionTitle"

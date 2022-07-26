@@ -1,0 +1,63 @@
+.whatcanteach
+  width: 100%
+  background-color: #eee
+  padding: 100px
+  .whatcanteachContainer
+    max-width: 1000px
+    width: 100%
+    margin: 0 auto
+    .whatcanteachTitle
+      background-color: #fff
+      width: 70%
+      margin: 0 auto
+      height: 150px
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      position: relative
+      p
+        text-align: center
+        font-size: 40px
+        line-height: 1.5
+      .corner
+        display: block
+        width: 0px
+        height: 0px
+        border-style: solid
+        border-color: #f8e903 transparent transparent transparent
+        border-width: 80px 80px 0 80px
+        position: absolute
+        &:nth-last-of-type(1)
+          bottom: -30px
+          right: -70px
+          transform: rotate(-45deg)
+          opacity: .5
+        &:nth-last-of-type(2)
+          top: -30px
+          left: -70px
+          transform: rotate(135deg)
+          opacity: .5
+    .languagesWrapper
+      width: 100%
+      margin-top: 50px
+      .language
+        width: 90%
+        background-color: #fff
+        border: 1px solid #000
+        padding: 30px
+        &:not(:first-of-type)
+          margin-top: 50px
+        &:nth-of-type(even)
+          margin-left: auto
+        &:nth-of-type(odd)
+          margin-right: auto
+        .languageName
+          font-size: 25px
+          color: #999
+          font-weight: bold
+        .description
+          margin-top: 20px
+          font-size: 17px
+          line-height: 1.5
+          color: #999

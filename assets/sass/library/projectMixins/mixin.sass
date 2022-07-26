@@ -1,0 +1,122 @@
+@charset "UTF-8"
+@use "../../variables" as var
+
+// プロジェクト内（サイト内）で独自に使うmixin。
+
+=buttonStyle
+  display: block
+  border: none
+  width: 260px
+  padding: 25px 30px
+  padding-right: 50px
+  background: linear-gradient(90deg, #03d90a, #29cd1a)
+  color: #fff
+  box-shadow: 0 3px 10px #ccc
+  font-size: 20px
+  font-weight: 700
+  border-radius: 35px
+  position: relative
+  transition: .3s
+  z-index: 3
+  &::before
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    content: "\f0a9"
+    position: absolute
+    top: 50%
+    right: 25px
+    transform: translateY(-50%)
+    transition: .3s
+  &:hover
+    transform: translateY(2px) scale(.98)
+    box-shadow: none
+    opacity: .7
+    &::before
+      right: 15px
+// @media screen and (max-width: 768px)
+//     padding: 20px 5px
+//     padding-right: 40px
+//     margin: 50px auto
+
+=whiteTriangleStyle
+  position: absolute
+  top: -130px
+  left: -100px
+  width: 120vw
+  height: 200px
+  background-color: #fff
+  z-index: 2
+
+=scaleHideElements
+  opacity: 0
+  transition: 1s
+  transform: scale(.9)
+
+=showElements
+  opacity: 1
+  transform: none
+
+=sectionStyle
+  .sectionTitleArea
+    position: relative
+    display: inline-block
+    .sectionTitle
+      display: inline-block
+      position: relative
+      overflow: hidden
+      z-index: 4
+      .sectionText
+        font-size: 40px
+    .underLine
+      display: block
+      background: #333
+      width: 100%
+      height: 1px
+      position: absolute
+      bottom: -10px
+      left: 0
+      z-index: 4
+    .backcircleFill
+      width: 130px
+      height: 130px
+      background-color: var.$yellow
+      border-radius: 50%
+      position: absolute
+      top: 50%
+      left: -40px
+      transform: translateY(-50%)
+      z-index: 3
+      border: 5px solid #fff
+    .backcircleStripes
+      width: 130px
+      height: 130px
+      background-color: var.$green
+      border-radius: 50%
+      position: absolute
+      top: 50%
+      left: -20px
+      transform: translateY(-40%)
+      z-index: 2
+      background: repeating-linear-gradient(-45deg, var.$yellow, var.$yellow 7px, white 1px, white 15px)
+  @media screen and (max-width: 768px)
+    .sectionTitleArea
+        .sectionTitle
+          font-size: 30px
+        .backcircleFill, .backcircleStripes
+          width: 100px
+          height: 100px
+          left: -20px
+        .backcircleStripes
+          left: -15px
+
+=contentsStyle
+  .Contents
+    max-width: 1000px
+    width: 100%
+    margin: 20px auto 50px
+    padding: 0 20px
+    +sectionStyle
+  @media screen and (max-width: 768px)
+    .Contents
+      padding: 0
+      margin-top: 0
